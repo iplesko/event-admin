@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventList should render correctly 1`] = `
+<body>
+  <div>
+    <div>
+      <button>
+        A
+      </button>
+      <ul
+        class="test"
+      >
+        <li>
+          123
+          , 
+          test event name
+          , 
+          test event description
+          ,
+          <button>
+            R
+          </button>
+          <button>
+            U
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;

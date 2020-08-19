@@ -1,6 +1,9 @@
 import React from 'react';
-import DemoModule from "./modules/DemoModule/DemoModule";
+import EventList from "./modules/EventList/EventList";
+import { EventsContextProvider } from "./modules/EventsContext/index";
 
 export default () => (
-    <DemoModule />
+    <EventsContextProvider>
+      <EventList />
+    </EventsContextProvider>
 );
