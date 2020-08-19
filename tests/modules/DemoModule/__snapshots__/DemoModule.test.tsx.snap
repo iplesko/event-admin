@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DemoModule should render correctly 1`] = `
+<body>
+  <div>
+    <p
+      class="test"
+    >
+      abcdefg
+    </p>
+  </div>
+</body>
+`;
