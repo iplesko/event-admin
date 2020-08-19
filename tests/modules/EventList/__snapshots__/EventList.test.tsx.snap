@@ -3,28 +3,64 @@
 exports[`EventList should render correctly 1`] = `
 <body>
   <div>
-    <div>
-      <button>
-        A
-      </button>
-      <ul
-        class="test"
+    <div
+      class="row"
+    >
+      <div
+        class="col"
       >
-        <li>
-          123
-          , 
-          test event name
-          , 
-          test event description
-          ,
-          <button>
-            R
-          </button>
-          <button>
-            U
-          </button>
-        </li>
-      </ul>
+        <button
+          class="btn btn-success"
+          type="button"
+        >
+          Add event
+        </button>
+      </div>
+    </div>
+    <div
+      class="event-list row"
+    >
+      <div
+        class="col-sm-4"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="card-body"
+          >
+            <div
+              class="card-title"
+            >
+              test event name
+            </div>
+            <div
+              class="text-muted card-subtitle"
+            >
+              Thu, 01 Jan 1970 03:25:45 GMT
+               - 
+              Fri, 02 Jan 1970 00:20:54 GMT
+            </div>
+            <p
+              class="card-text"
+            >
+              test event description
+            </p>
+            <button
+              class="btn btn-primary"
+              type="button"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger"
+              type="button"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>

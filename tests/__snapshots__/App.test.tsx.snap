@@ -2,6 +2,8 @@
 
 exports[`App component should render correctly 1`] = `
 <Unknown>
-  <Unknown />
+  <Unknown>
+    <Unknown />
+  </Unknown>
 </Unknown>
 `;

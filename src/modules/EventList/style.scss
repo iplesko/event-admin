@@ -1,5 +1,15 @@
-p {
-  &.test {
-    color: darkred;
+.event-list {
+  .card {
+    margin-top: 1.6rem;
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
+
+  .card-body {
+    button {
+      margin-right: 1rem;
+    }
   }
 }
