@@ -27,8 +27,17 @@ export default ({ heading, buttonText, onConfirm, visible, toggleVisibility, dis
   }
 
   const handleChangeDate = (e: ChangeEvent<HTMLInputElement>) => {
-    const { id, value } = e.target;
-    setEvent(prevState => ({ ...prevState, [id]: new Date(value) }));
+    let from: Date;
+    let to: Date;
+
+    if (e.target.id === 'to') {
+      to = new Date(e.target.value);
+      from = event.from > to ? to : event.from;
+    } else {
+      from = new Date(e.target.value);
+      to = from > event.to ? from : event.to;
+    }
+    setEvent(prevState => ({ ...prevState, from, to }));
   }
 
   const confirm = (e: FormEvent) => {
