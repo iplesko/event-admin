@@ -17,16 +17,14 @@ const empty = () => ({
 });
 
 export default ({ heading, buttonText, onConfirm, visible, toggleVisibility, displayedEvent }: Props): ReactElement => {
-  const [ event, setEvent ] = useState<Event>({
-    name: '', from: new Date(), to: new Date(), description: '',
-  });
+  const [ event, setEvent ] = useState<Event>(empty());
 
   const handleChangeText = (e: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setEvent(prevState => ({ ...prevState, [id]: value }));
   }
 
-  const handleChangeDate = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChangeDateRange = (e: ChangeEvent<HTMLInputElement>) => {
     let from: Date;
     let to: Date;
 
@@ -64,12 +62,12 @@ export default ({ heading, buttonText, onConfirm, visible, toggleVisibility, dis
 
               <FormGroup required>
                 <Label for="from">From *</Label>
-                <Input required type="date" id="from" value={formatDate(event.from)} onChange={handleChangeDate}/>
+                <Input required type="date" id="from" value={formatDate(event.from)} onChange={handleChangeDateRange}/>
               </FormGroup>
 
               <FormGroup required>
                 <Label for="to">To *</Label>
-                <Input required type="date" id="to" value={formatDate(event.to)} onChange={handleChangeDate}/>
+                <Input required type="date" id="to" value={formatDate(event.to)} onChange={handleChangeDateRange}/>
               </FormGroup>
 
               <FormGroup>
