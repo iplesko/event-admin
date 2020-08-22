@@ -7,18 +7,28 @@ interface Props {
   children: ReactElement;
 }
 
-export default ({children} : Props): ReactElement => {
+const compareEvents = (a: Event, b: Event): number => {
+  if (a.from === b.from) {
+    return 0;
+  }
+
+  return a.from > b.from ? -1 : 1;
+}
+
+export default ({ children }: Props): ReactElement => {
   const [ events, setEvents ] = useState<Event[]>([])
   const { getAndIncrement } = useCounter();
 
   // TODO: make this better readable
   const context: EventsContextType = {
     events: events,
-    addEvent: (e: Event) => setEvents(previousEvents => ([ ...previousEvents, { ...e, id: getAndIncrement() } ])),
+    addEvent: (e: Event) => setEvents(previousEvents => ([
+      ...previousEvents, { ...e, id: getAndIncrement() }
+    ].sort(compareEvents))),
     removeEvent: (eventId: number) => setEvents(previousEvents => previousEvents.filter(pe => pe.id !== eventId)),
-    updateEvent: (eventId: number, e: Event) => setEvents(previousEvents => [ ...previousEvents ].map(
-        pe => pe.id === eventId ? e : pe
-    ))
+    updateEvent: (e: Event) => setEvents(previousEvents => [ ...previousEvents ].map(
+        pe => pe.id === e.id ? e : pe
+    ).sort(compareEvents))
   }
 
   return (

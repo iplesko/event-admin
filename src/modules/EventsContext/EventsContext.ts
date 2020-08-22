@@ -5,7 +5,7 @@ export interface EventsContextType {
   events: Event[],
   addEvent: (e: Event) => void;
   removeEvent: (eventId: number) => void;
-  updateEvent: (eventId: number, e: Event) => void
+  updateEvent: (e: Event) => void
 }
 
 export default createContext<EventsContextType>(undefined);
