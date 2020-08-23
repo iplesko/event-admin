@@ -25,7 +25,7 @@ Then open http://localhost:8080 in a browser of your choice.
 
 To run all tests execute the following command:
 
-    npm run tets
+    npm tets
 
 To run lint use this command. Drop the `--fix` parameter if automatic fix is not desired.
 

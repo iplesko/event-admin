@@ -3,8 +3,6 @@
 exports[`EventList should render correctly 1`] = `
 <body>
   <div>
-    <div />
-    <div />
     <div
       class="row"
     >
@@ -34,9 +32,7 @@ exports[`EventList should render correctly 1`] = `
             <div
               class="card-title"
             >
-              test event name
-               
-               
+              test event name 
               <span
                 class="badge badge-info"
               >
@@ -46,9 +42,7 @@ exports[`EventList should render correctly 1`] = `
             <div
               class="text-muted card-subtitle"
             >
-              1970-01-01
-               - 
-              1970-01-02
+              1970-01-01 - 1970-01-02
             </div>
             <p
               class="card-text"

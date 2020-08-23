@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { useEventsContext } from '../EventsContext';
 import { Event } from '../../model/Event';
-import EventForm from '../EventForm/EventForm';
+import EventForm from '../EventForm';
 import formatDate from '../../function/formatDate';
 
 export default (): React.ReactElement => {
