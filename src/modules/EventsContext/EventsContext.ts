@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import { Event } from '../../model/Event'
+import { Event } from '../../model/Event';
 
 export interface EventsContextType {
   events: Event[],

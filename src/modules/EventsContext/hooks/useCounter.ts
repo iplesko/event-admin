@@ -5,14 +5,14 @@ interface CounterHook {
 }
 
 export default (): CounterHook => {
-  const [ i, setI ] = useState<number>(0);
+  const [i, setI] = useState<number>(0);
 
   return {
     getAndIncrement: () => {
       const currentI = i;
-      setI(prevI => prevI + 1);
+      setI((prevI) => prevI + 1);
 
       return currentI;
-    }
-  }
-}
+    },
+  };
+};

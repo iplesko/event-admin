@@ -1,12 +1,12 @@
-import React from 'react';
-import EventList from "./modules/EventList/EventList";
-import { EventsContextProvider } from "./modules/EventsContext/index";
-import Layout from "./modules/Layout/Layout";
+import React, { ReactElement } from 'react';
+import EventList from './modules/EventList/EventList';
+import { EventsContextProvider } from './modules/EventsContext';
+import Layout from './modules/Layout/Layout';
 
-export default () => (
-    <Layout>
-      <EventsContextProvider>
-        <EventList/>
-      </EventsContextProvider>
-    </Layout>
+export default (): ReactElement => (
+  <Layout>
+    <EventsContextProvider>
+      <EventList />
+    </EventsContextProvider>
+  </Layout>
 );

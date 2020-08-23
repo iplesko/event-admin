@@ -23,6 +23,10 @@ We use webpack to build the app. To use webpack dev server for live hot reloadin
 
 Then open http://localhost:8080 in a browser of your choice.
 
-To run all tests execute the folowwing command:
+To run all tests execute the following command:
 
     npm run tets
+
+To run lint use this command. Drop the `--fix` parameter if automatic fix is not desired.
+
+    npm run lint --fix
