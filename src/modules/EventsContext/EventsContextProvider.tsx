@@ -19,7 +19,7 @@ export default ({ children }: Props): ReactElement => {
   const [events, setEvents] = useState<Event[]>([]);
   const { getAndIncrement } = useCounter();
 
-  // TODO: make this better readable
+  // TODO: is this readable for other team members?
   const context: EventsContextType = {
     events,
 
