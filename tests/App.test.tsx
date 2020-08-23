@@ -1,12 +1,11 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { shallow } from 'enzyme';
 import App from '../src/App';
 
 describe('App component', () => {
   it('should render correctly', () => {
-    const renderer = ShallowRenderer.createRenderer();
-    renderer.render(<App />);
+    const wrapper = shallow(<App />);
 
-    expect(renderer.getRenderOutput()).toMatchSnapshot();
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 });

@@ -45,11 +45,11 @@ export default (): React.ReactElement => {
 
       <Row className="event-list">
         {events.map((e) => {
-          const now = new Date();
+          const now = new Date(Date.now());
           const past = e.from < new Date(now.setDate(now.getDate() - 1));
           return (
             <Col sm={4} key={e.id}>
-              <Card className={past && 'past-event'}>
+              <Card className={past ? 'past-event' : ''}>
                 <CardBody>
                   <CardTitle>
                     {`${e.name} `}

@@ -22,11 +22,14 @@ export default ({ children }: Props): ReactElement => {
   // TODO: make this better readable
   const context: EventsContextType = {
     events,
+
     addEvent: (e: Event) => setEvents((previousEvents) => ([
       ...previousEvents, { ...e, id: getAndIncrement() },
     ].sort(compareEvents))),
+
     removeEvent: (eventId: number) => setEvents((previousEvents) => previousEvents
       .filter((pe) => pe.id !== eventId)),
+
     updateEvent: (e: Event) => setEvents((previousEvents) => [...previousEvents].map(
       (pe) => (pe.id === e.id ? e : pe),
     ).sort(compareEvents)),
