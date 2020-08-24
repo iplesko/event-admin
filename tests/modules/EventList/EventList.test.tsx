@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import { Button, Card } from 'reactstrap';
 import EventList from '../../../src/modules/EventList/EventList';
@@ -36,9 +35,9 @@ describe('EventList', () => {
   });
 
   it('should render correctly', () => {
-    const { baseElement } = render(<EventList />);
+    const wrapper = shallow(<EventList />);
 
-    expect(baseElement).toMatchSnapshot();
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   it('should add new event', () => {

@@ -1,70 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EventList should render correctly 1`] = `
-<body>
-  <div>
-    <div
-      class="row"
-    >
-      <div
-        class="col"
-      >
-        <button
-          class="btn btn-success"
-          type="button"
-        >
-          Add event
-        </button>
-      </div>
-    </div>
-    <div
-      class="event-list row"
-    >
-      <div
-        class="col-sm-4"
-      >
-        <div
-          class="past-event card"
-        >
-          <div
-            class="card-body"
-          >
-            <div
-              class="card-title"
-            >
-              test event name 
-              <span
-                class="badge badge-info"
-              >
-                Past event
-              </span>
-            </div>
-            <div
-              class="text-muted card-subtitle"
-            >
-              1970-01-01 - 1970-01-02
-            </div>
-            <p
-              class="card-text"
-            >
-              test event description
-            </p>
-            <button
-              class="btn btn-primary"
-              type="button"
-            >
-              Edit
-            </button>
-            <button
-              class="btn btn-danger"
-              type="button"
-            >
-              Remove
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+"<Fragment>
+  <Component heading=\\"Add event\\" buttonText=\\"Add\\" onConfirm={[Function: mockConstructor]} visible={false} toggleVisibility={[Function: toggleAddFormVisible]} />
+  <Component heading=\\"Edit event\\" buttonText=\\"Save\\" onConfirm={[Function: mockConstructor]} visible={false} toggleVisibility={[Function: toggleEditFormVisible]} displayedEvent={{...}} />
+  <Row tag=\\"div\\" widths={{...}}>
+    <Col tag=\\"div\\" widths={{...}}>
+      <Button onClick={[Function: toggleAddFormVisible]} color=\\"success\\" tag=\\"button\\">
+        Add event
+      </Button>
+    </Col>
+  </Row>
+  <Row className=\\"event-list\\" tag=\\"div\\" widths={{...}}>
+    <Col sm={4} tag=\\"div\\" widths={{...}}>
+      <Card className=\\"past-event\\" tag=\\"div\\">
+        <CardBody tag=\\"div\\">
+          <CardTitle tag=\\"div\\">
+            test event name 
+            <Badge color=\\"info\\" pill={false} tag=\\"span\\">
+              Past event
+            </Badge>
+          </CardTitle>
+          <CardSubtitle className=\\"text-muted\\" tag=\\"div\\">
+            1970-01-01 - 1970-01-02
+          </CardSubtitle>
+          <CardText tag=\\"p\\">
+            test event description
+          </CardText>
+          <Button color=\\"primary\\" onClick={[Function: onClick]} tag=\\"button\\">
+            Edit
+          </Button>
+          <Button color=\\"danger\\" onClick={[Function: onClick]} tag=\\"button\\">
+            Remove
+          </Button>
+        </CardBody>
+      </Card>
+    </Col>
+  </Row>
+</Fragment>"
 `;

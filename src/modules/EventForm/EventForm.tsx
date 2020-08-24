@@ -34,11 +34,12 @@ export default ({
     let from: Date;
     let to: Date;
 
-    if (e.target.id === 'to') {
-      to = new Date(e.target.value);
+    const { id, value } = e.target;
+    if (id === 'to') {
+      to = new Date(value);
       from = event.from > to ? to : event.from;
     } else {
-      from = new Date(e.target.value);
+      from = new Date(value);
       to = from > event.to ? from : event.to;
     }
     setEvent((prevState) => ({ ...prevState, from, to }));
