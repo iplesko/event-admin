@@ -12,9 +12,9 @@ The point of this project is to demonstrate my programming habits and show styli
  - events represented as cards in grid
  - each event card contains button for edit and delete
  - edit button opens same modal with form as add button
- - date from can't be set after date to and vice versa
+ - _date from_ can't be set after _date to_ and vice versa
  - optional event description
- - events sorted by date from
+ - events sorted by _date from_
  - past events visually different from future events
 
 **Non functional**
@@ -46,7 +46,7 @@ Then open http://localhost:8080 in a browser of your choice.
 
 To run all tests execute the following command:
 
-    npm tets
+    npm test
 
 To run lint use this command
 
